@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rosso1: #c5142d;
+    --rosso2: #eb1735;
+    --rosso3: #b71229;
+    --rosso4: #6a0a17;
+    --bianco1: #ffffff;
+    --nero1: #000000;
+}
+
+@font-face {
+    font-family: Kalam-Bold;
+    src: url(/src/fonts/Kalam-Bold.ttf);
+}
+
+@font-face {
+    font-family: Kalam-Light;
+    src: url(/src/fonts/Kalam-Light.ttf);
+}
+
+body {
+    font-family: Kalam-Bold;
+}
+
+nav {
+    background-color: var(--rosso3);
+    padding: 40px;
+}
+
+.barra_navigazione {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo_nav {
+    font-size: 50px;
+    padding: 10px;
+}
+
+#logo_nav > a {
+    text-decoration: none;
+    color: var(--bianco1);
+}
+
+@keyframes animazione_nav {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+.barra_navigazione > a:hover {
+    animation-name: animazione_nav;
+    animation-duration: 1s;
+}
+
+#elemento_nav {
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--bianco1);
+}
+
+div.gallery {
+    border: 5px solid var(--rosso2);
+    border-radius: 10px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+footer {
+    background-color: var(--rosso3);
+    padding: 50px 0;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+.footer_section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer_section > h1, h2 {
+    color: var(--bianco1);
+    margin-bottom: 10px;
+}
+
+.footer_section p {
+    color: var(--bianco1);
+    margin-bottom: 5px;
+}
+
+.footer_section > p > a {
+    text-decoration: none;
+    color: var(--bianco1);
+}
+
+.footer_section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer_section ul li {
+    margin-bottom: 5px;
+}
+
+.footer_section ul li a {
+    color: var(--bianco1);
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.social_links {
+    display: flex;
+    padding-left: 0;
+}
+
+.social_links li {
+    margin-right: 10px;
+}
+
+.social_links li:last-child {
+    margin-right: 0;
+}
+
+.social_links li a img {
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 670px) {
+    #logo_nav > a {
+        text-decoration: none;
+        color: var(--bianco1);
+        font-size: 30px;
+    }
+
+    #logo_giglio {
+        width: 100px;
+    }
+
+    article {
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    article > img {
+        display: none;
+    }
+
+    article > h1 {
+        display: none;
+    }
+
+    nav > a {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    article > p {
+        font-size: 25px
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    article > p {
+        font-size: 20px
+    }
+}
